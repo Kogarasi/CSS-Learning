@@ -1,0 +1,30 @@
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Safearea非対応のナビゲーションバー</title>
+
+<style>
+  body {
+    margin: 0px;
+    background-color: powderblue;
+
+    margin-top: calc( 40px + env( safe-area-inset-top ) );
+  }
+
+  .nav {
+    background-color: silver;
+    color: darkblue;
+
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: calc( 40px + env( safe-area-inset-top ) );
+  }
+</style>
+
+<div class="nav">
+  ここはナビゲーションバー
+</div>
+
+ここはbody<br>
+高さを調整しないといけないよ！<br>
+ねむい

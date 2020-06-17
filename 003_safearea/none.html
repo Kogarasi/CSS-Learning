@@ -9,7 +9,10 @@
 
     margin-top: 40px;
 
-    height: 2000px;
+    display: flex;
+    flex-direction: column;
+
+    height: calc( 100vh - 40px );
   }
 
   .nav {
@@ -21,12 +24,28 @@
     width: 100vw;
     height: 40px;
   }
+
+  .content {
+    flex: 1 0 auto;
+  }
+
+  .sticky-footer {
+    background-color: darkgoldenrod;
+    flex-shrink: 0;
+  }
 </style>
 
 <div class="nav">
   ここはナビゲーションバー
 </div>
 
-ここはbody<br>
-高さを調整しないといけないよ！<br>
-ねむい
+
+<div class="content">
+  ここはbody<br>
+  高さを調整しないといけないよ！<br>
+  ねむい
+</div>
+  
+<div class="sticky-footer">
+  ここはフッター
+</div>

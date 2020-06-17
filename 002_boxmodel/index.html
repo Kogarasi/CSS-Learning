@@ -1,0 +1,80 @@
+<title>CSS-Learning No.002 Box-Model</title>
+
+<style>
+  .description {
+    background-color: #eee;
+  }
+
+  .base_box {
+    width: 600px;
+    height: 150px;
+    border: solid 1px pink;
+    margin: 10px;
+  }
+
+  .content_box {
+    width: 180px;
+    background-color: lightskyblue;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+  }
+
+  .correct_box .content_box {
+    box-sizing: border-box;
+  }
+
+  .incorrect_box .content_box {
+    box-sizing: content-box;
+  }
+</style>
+
+<div class="sample">
+
+  <div class="description">
+    ピンクのブロックの幅が600px<br>
+    水色のブロックの幅が180px、margin/paddingともに10pxに設定
+
+    要素の大きさが180pxでmarginが10px*2でぴったり収まるつもりでスタイリング
+  </div>
+
+  <div class="unspecified_box base_box">
+    ブラウザごとの挙動<br>
+    <div class="content_box">
+      要素
+    </div>
+    <div class="content_box">
+      要素
+    </div>
+    <div class="content_box">
+      要素
+    </div>
+  </div>
+
+  <div class="correct_box base_box">
+    想定した挙動（ box-sizing: border-box )<br>
+    <div class="content_box">
+      要素
+    </div>
+    <div class="content_box">
+      要素
+    </div>
+    <div class="content_box">
+      要素
+    </div>
+  </div>
+
+  <div class="incorrect_box base_box">
+    意図していない挙動 ( box-sizing: content-box )<br>
+    <div class="content_box">
+      要素
+    </div>
+    <div class="content_box">
+      要素
+    </div>
+    <div class="content_box">
+      要素
+    </div>
+  </div>
+
+</div>
